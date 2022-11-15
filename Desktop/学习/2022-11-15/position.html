@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* static定位 */
+        div.static{
+            border: 50px solid green;
+            position: static;
+        }
+        /* fixed定位 */
+        p.pos_fixed{
+            position:fixed;
+            top: 50%;
+            left: 50%;
+        }
+        /* relative定位 */
+        /* 保留原有空间 */
+        h2.left{
+            position: relative;
+            left: -50px;
+        }
+        h2.right{
+            position: relative;
+            left: 50px;
+        }
+        /* absolute定位 */
+        p.ab{
+            position: absolute;
+          left: 400px;
+          top: 600px;
+        }
+        /* 粘性定位 */
+        div.sticky{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            background-color: black;
+            color: aliceblue;
+        }
+        /* 重叠元素 */
+        img{
+            position: absolute;
+            left: 0%;
+            top: 700px;
+            z-index: -1;
+        }
+        p.1{
+            position: absolute;
+            left: 0%;
+            top: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky">粘性定位</div>
+    <p>123</p>
+    <div class="static">正常文档流顺序</div>
+    <p>123</p>
+    <p class="pos_fixed">固定不动</p>
+    <p>some text</p><p>some text</p><p>some text</p><p>some text</p><p>some text</p><p>some text</p><p>some text</p>
+       <h2>正常标题</h2>
+       <h2 class="left">左移标题</h2>
+       <h2 class="right">右移标题</h2>
+       <p class="ab">绝对定位的标题</p>
+       <p class="1">覆盖在图片上</p>
+       <img src="w3css.gif" width="70" height="70">
+       
+</body>
+</html>
