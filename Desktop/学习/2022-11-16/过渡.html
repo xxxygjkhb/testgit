@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 过渡 */
+        div{
+            width: 200px;
+            height: 100px;
+            background: yellow;
+            transition:width  2s;
+            -webkit-transition: width 2s;
+        }
+        div:hover{
+            width: 500px;
+        }
+        /* 多项属性改变 */
+        div.a{
+            width: 200px;
+            height: 100px;
+            background: red;
+            transition:width 2s,height 2s,transform 2s;
+            -webkit-transition:width 2s,height 2s,transform 2s;
+        }
+        .a:hover{
+            width: 500px;
+            height: 500px;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+        }
+        /* 简写属性 */
+        div.b{
+            background-color: aquamarine;
+            width: 200px;
+            height: 100px;
+            transition: height 2s linear 2s;
+            -webkit-transition: height 2s linear 2s;
+        }
+        .b:hover{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>鼠标移动到我身上</div>
+    <p></p>
+    <div class="a">鼠标移动到我身上</div>
+    <p></p>
+    <div class="b">鼠标移动到我身上</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 居中对齐 */
+        div.center{
+            margin: auto;
+            width: 50px;
+            height: 50px;
+            border: 25px solid rgb(16, 223, 223);
+            padding: 10px;
+        }
+        /* 文本居中 */
+        div.text{
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            border: 25px solid rgb(7, 175, 175);
+            padding: 10px;
+            margin: 50px;
+        }
+        /* 图片居中 */
+        img {
+             display: block;
+            margin: auto;
+             width: 40%;
+            }
+            /* 绝对定位的对齐 */
+            .right{
+                position: absolute;
+                right: 0px;
+                width: 150px;
+                border: 5px solid red;
+                padding: 10px;
+            }
+            /* float方式 */
+            .left{
+                float: left;
+                width: 300px;
+                border: 3px solid greenyellow;
+                padding: 10px;
+            }
+            /* 水平垂直居中 */
+            .padding{
+                padding: 50px 0;
+                border: 5px solid red;
+                text-align: center;
+            }
+            /* 使用line-height垂直居中 */
+            .line_height{
+                line-height: 200px;
+                height: 200px;
+                border: 5px solid yellow;
+                text-align: center;
+            }
+            /* 使用transform */
+            div.transform{
+                height: 200px;
+                position: relative;
+                border: 5px solid  gray;
+            }
+            .transform p{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform:translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+            }
+    </style>
+</head>
+<body>
+    <div class="center">居中对齐</div>
+    <div class="text">文本居中</div>
+    <img src="https://static.runoob.com/images/mix/paris.jpg" alt="Paris">
+    <p class="right">绝对定位向右对齐</p>
+    <p class="left">float方式向左对齐</p>
+    <p class="padding">垂直居中</p>
+    <p class="line_height">line方式</p>
+    <div class="transform">
+        <p>使用transform</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 内容溢出 */
+        div.visible{
+            width: 200px;
+            height: 50px;
+            border: 2px solid red;
+            overflow:visible;
+        }
+        /* 溢出内容被修剪，不可见 */
+        div.hidden{
+            width: 200px;
+            height: 50px;
+            border: 2px solid gray;
+            overflow: hidden;
+            position: absolute;
+            left: 300px;
+            top: 0;
+        }
+        /* 滚动查看 */
+        div.scroll{
+            width: 200px;
+            height: 50px;
+            border: 2px solid green;
+            overflow: scroll;
+            position: absolute;
+            top: 0;
+            left: 600px;
+        }
+        /* 被修剪后滚动查看 */
+        div.auto{
+            width: 200px;
+            height: 50px;
+            border: 2px solid rgb(180, 228, 7);
+            overflow: auto;
+            position: absolute;
+            top: 500px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="visible">
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+    </div>
+    <div class="hidden">
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+    </div>
+    <div class="scroll">
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+    </div>
+    <div class="auto">
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+        <p>内容溢出</p>
+    </div>
+</body>
+</html>
