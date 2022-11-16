@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 标签选择器 */
+
+    /* 选择所有标签 */
+    *{
+        margin: 0px;
+        padding: 10px;
+    }
+    /* 选择出h1标签 */
+    h1{
+        color: aqua;
+    }
+    /* 选择出p标签 */
+    p{
+        color: red;
+    }
+    /* 类选择器 */
+    .center{
+        text-align: center;
+    }
+    /* id选择器 */
+    #test{
+        background-color: cadetblue;
+        margin: 5px ;
+        width: 200px;
+        height: 150px;
+        border: 5px solid yellow;
+    }
+    /* 并集选择器 */
+    #a,#b{
+        background-color: forestgreen;
+        width: 500px;
+    }
+    /* 交集选择器 */
+    div.a{
+        background-color: coral;
+    }
+    /* 后代选择器 */
+    div .a{background-color: brown;}
+    /* 子标签选择器 */
+    div.a>.b{
+        background-color: black;
+    }
+    /* 属性选择器 */
+    [class~="test2"]{
+        background-color: darkturquoise;
+    }
+    /* 相邻兄弟选择器 */
+    h2+p{
+        background-color: khaki;
+    }
+    /* 伪类选择器 */
+    p.c{
+        font-size: 50px;
+    }
+    p.c:first-child{
+        color:  rgb(230, 164, 20);
+    }
+    p.c:last-child{
+        color:  rgb(20, 230, 185);
+    }
+</style>
+<body>
+    <h1>123</h1>
+    <h1 class="center">类选择器</h1>
+    <p>456</p>
+    <div id="test">id选择器</div>
+    <div id="a">并集选择器</div>
+    <div class="a">交集选择器</div>
+    <p></p>
+    <div class="a">
+        <div>
+        <p class="a">1</p>
+        </div>
+        <p class="b"></p>
+    </div>
+    <p></p>
+    <div>
+        <p class="test2">789</p>
+    </div>
+    <p></p>
+    <div>
+    <h2>看下面</h2>
+        <p>111</p>
+        <p>没被选择</p>
+    </div>
+    <p></p>
+    <div>
+        <p class="c">黄色</p>
+            <p class="c">红色</p>
+            <p class="c">绿色</p>
+    </div>
+</body>
+</html>
