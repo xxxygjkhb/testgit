@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           /* tooltip */
+           .tooltip1{
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px solid blue;
+           }
+           .tooltip1 .tooltiptext1{
+                  text-align: center;
+                  color: white;
+                  background-color: black;
+                  visibility:hidden;
+                  width: 100%;
+                  padding: 3px;
+                  height: 100%;
+                  border-radius: 5px;
+                  /* 定位 */
+                  position: absolute;
+                  z-index: 1;
+           }
+           .tooltip1:hover .tooltiptext1{
+            visibility: visible;
+           }
+           /* 提示在左边 */
+            .tooltip2{
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px solid red;
+                left: 50%;
+            }
+            .tooltip2 .tooltiptext2{
+                text-align: center;
+                background-color: black;
+                color: white;
+                padding: 3px;
+                width: 100%;
+                visibility: hidden;
+                border-radius: 5px;
+                position: absolute;
+                z-index: 1;
+                top: -3px;
+                right: 105%;
+            }
+            .tooltip2:hover .tooltiptext2{visibility: visible;}
+                /* 带箭头的提示 */
+                .tooltip3{
+                    display: inline-block;
+                    position: relative;
+                    border-bottom: 1px solid yellow;
+                }
+                .tooltip3 .tooltiptext3{
+                    text-align: center;
+                    background-color: black;
+                    color: white;
+                    padding: 3px;
+                    width: 100%;
+                    visibility: hidden;
+                    border-radius: 5px;
+                    position: absolute;
+                    z-index: 1;
+                    top: 150%;
+                    left: 50%;
+                    margin-left: -50px;
+                }
+                .tooltip3 .tooltiptext3::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent black transparent;
+                }
+                .tooltip3:hover .tooltiptext3{visibility: visible;}
+                /* 淡入效果 */
+                .tooltip4{
+                    position: relative;
+                    display: inline-block;
+                }
+                .tooltip4 .tooltiptext4{
+                    position:absolute;
+                    visibility: hidden;
+                    text-align: center;
+                    background-color: black;
+                    color: white;
+                    width: 120px;
+                    padding: 5px;
+                    z-index: 1;
+                    bottom: 100%;
+                    left: 50px;
+                    margin-left: -60px;
+
+                    opacity: 0;
+                    transition: opacity 1s;
+
+                }
+                .tooltip4:hover .tooltiptext4{visibility: visible;
+                   opacity: 1;
+                }
+    </style>
+
+</head>
+<body>
+    <div class="tooltip1">
+            鼠标移动到这
+            <span class="tooltiptext1">我是提示</span>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="tooltip2" >
+        鼠标移动到这
+        <span class="tooltiptext2">我是提示</span>
+</div>
+<p></p>
+<div class="tooltip3">
+    鼠标移动到这
+         <span class="tooltiptext3">我是文本</span>
+</div>
+<p></p>
+<p></p>
+<div class="tooltip4">
+    鼠标移动到这
+    <span class="tooltiptext4">我是提示</span>
+
+</div>
+</body>
+</html>

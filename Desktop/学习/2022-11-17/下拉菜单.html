@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 基本下拉菜单 */
+
+        .dropdown1{
+            position: relative;
+            display: inline-block;
+        }
+        .content1{
+            display: none;
+            position: absolute;
+            background-color: rgb(161, 151, 151);
+            min-width: 50px;
+            box-shadow: 0px 8px 16px 0px rgb(0,0,0);
+            padding: 5px;
+            border: 1px solid black;
+            margin: 0%;
+        }
+        .dropdown1:hover .content1{
+            display: block;
+        } 
+        /* 下拉菜单选取某一项 */
+        .dropbtn1{
+            background-color: #57be5a;
+            color: black;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown2{
+            position: relative;
+            display: inline-block;
+        }
+        .content2{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            box-shadow: 0px 10px 15px 0px;
+        }
+        .content2 a{
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        .content2 a:hover{background-color: #f1f1f1;}
+        .dropdown2:hover .content2{
+            display: block;
+        }
+        .dropdown2:hover .dropbtn1{
+            background-color: #3e8e41;
+        }
+        /* 下拉内容对齐方式 */
+        .dropbtn2{
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown3{
+            position: relative;
+            display: inline-block;
+        }
+        .content3{
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0, 2);
+        }
+        .content3 a{
+            text-decoration: none;
+            color: black;
+            padding: 0;
+            display: block;
+        }
+        .content3 a:hover{background-color: #f1f1f1;}
+        .dropdown3:hover .content3{
+            display: block;
+        } 
+        .dropdown3:hover .dropbtn2{background-color: #3e8e41;}
+    </style>
+</head>
+<body>
+    <div class="dropdown1">
+        <span>鼠标移动到这</span>
+        <div class="content1">
+             <p>123</p>
+             <p>456</p>
+        </div>
+    </div>
+    <p></p>
+    <div class="dropdown2" style="float:right ;">
+          <button class="dropbtn1">下拉菜单</button>
+          <div class="content2">
+                <a href="http://www.runoob.com">链接1</a>
+                <a href="http://www.runoob.com">链接2</a>
+                <a href="http://www.runoob.com">链接3</a>
+          </div>
+    </div>
+    <p></p>
+    <div class="dropdown3">
+         <button class="dropbtn2">下拉菜单2</button>
+         <div class="content3">
+            <a href="http://www.runoob.com">链接1</a>
+            <a href="http://www.runoob.com">链接2</a>
+            <a href="http://www.runoob.com">链接3</a>  
+         </div>
+    </div>
+</body>
+</html>

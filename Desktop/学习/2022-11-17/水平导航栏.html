@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* 水平导航栏 */
+
+             /* 内联 */
+             ul.neilian{
+                list-style-type: none;
+                margin: 0%;
+                padding: 0%;
+            
+
+             }
+             li.neilian{
+                display: inline;
+             }
+             /* 浮动 */
+             ul.float{
+                list-style-type: none;
+                margin: 0%;
+                padding: 0%;
+                overflow: hidden;
+             }
+             li.float{
+                float: left;
+             }
+             li.float a{
+                display: block;
+                width: 60px;
+                background-color: #dddddd;
+             }
+             /* 实例 */
+             ul.eg{
+                list-style-type: none;
+                margin: 0%;
+                padding: 0%;
+                overflow: hidden;
+                background-color: #333;
+                position: fixed;
+                top: 0%;
+                width: 100%;
+             }
+              li.eg{
+                float: left;
+                border-right: 1px solid white;
+                margin: 0%;
+              }
+              li.eg:last-child{
+                border: none;
+                
+              }
+              li.eg a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+              }
+              li.eg a.active{
+                background-color: green;
+              }
+              li.eg a:hover:not(.active){
+                background-color: #111
+              }
+              
+    </style>
+</head>
+<body>
+    <ul class="neilian">
+        <li class="neilian"><a href="#home">主页</a></li>
+        <!-- 使用#作为测试，站点需要真实url -->
+        <li class="neilian"><a href="#news">新闻</a></li>
+        <li class="neilian"><a href="#contact">联系</a></li>
+        <li class="neilian"><a href="#about">关于</a></li>
+    </ul>
+    <p></p>
+    <ul class="float">
+        <li class="float"><a href="#home">主页</a></li>
+        <!-- 使用#作为测试，站点需要真实url -->
+        <li class="float"><a href="#news">新闻</a></li>
+        <li class="float"><a href="#contact">联系</a></li>
+        <li class="float"><a href="#about">关于</a></li>
+    </ul>
+    <p></p>
+    <ul class="eg">
+        <!-- style="float:right ;" 使链接右对齐 -->
+        <li class="eg" ><a class="active" href="#home">主页</a></li>
+        <!-- 使用#作为测试，站点需要真实url -->
+        <li class="eg"><a href="#news">新闻</a></li>
+        <li class="eg"><a href="#contact">联系</a></li>
+        <li class="eg" style="float:right ;"><a href="#about">关于</a></li>
+    </ul>
+</body>
+</html>
