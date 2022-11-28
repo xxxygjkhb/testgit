@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //try语句
+        try{
+            var title ="JavaScript"
+            document.write(title);
+            document.write(str);
+            alert("所有语句都已经成功执行")
+        }catch(error){
+            alert("错误信息："+error.message);
+        }
+        document.write("<p>Hello World</p>")
+        */
+
+        //JS try catch finally语句
+       
+        var num=prompt("请输入一个值")
+        var start=Date.now();
+        try{
+            if(num>0&&num<=100){
+                console.log(Math.pow(num,num));
+            }else{
+                console.log("输入的值无效")
+            }
+        }catch(e){
+            console.log(e.message)
+        }finally{  
+            console.log("代码花费的时间："+(Date.now()-start)+"ms")
+        }
+        //抛出错误
+        function squareRoot(number){
+            if(number<0){
+                throw new Error("无法计算负数的平方根")
+            }else{
+                console.log(Math.sqrt(number));
+            }
+        }
+        try{
+            squareRoot(16);
+            squareRoot(965);
+            squareRoot(-8);
+            squareRoot(60);
+            console.log("所有函数都执行成功")
+        }catch(e){
+            console.log(e.message);
+        }
+    </script>
+    
+</body>
+</html>
