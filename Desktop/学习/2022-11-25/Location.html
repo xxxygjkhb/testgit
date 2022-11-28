@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://c.biancheng.net:8080/javascript/location-objcet.html?course=javascript&title=location#content" id="url"></a>
+    <button onclick="myAssign()">assign()</button>
+    <button onclick="myReload()">reload()</button>
+    <button onclick="myReplace()">replace()</button>
+    <button onclick="myToString()">toString()</button>
+    <script>
+        //Location:获取URL
+        var url = document.getElementById('url');
+        document.write("<b>hash：</b>" + url.hash + "<br>");
+        document.write("<b>host：</b>" + url.host + "<br>");
+        document.write("<b>hostname：</b>" + url.hostname + "<br>");
+        document.write("<b>href：</b>" + url.href + "<br>");
+        document.write("<b>pathname：</b>" + url.pathname + "<br>");
+        document.write("<b>port：</b>" + url.port + "<br>");
+        document.write("<b>protocol：</b>" + url.protocol + "<br>");
+        document.write("<b>search：</b>" + url.search + "<br>");
+        //方法：
+        var url = 'http://c.biancheng.net';
+        function myAssign(){
+            location.assign(url);
+        }
+        function myReload(){
+            location.reload();
+        }
+        function myReplace(){
+            location.replace(url);
+        }
+        function myToString(){
+            var url = document.getElementById('url');
+            var str = url.toString();
+            alert(str);
+        }
+    </script>
+</body>
+</html>

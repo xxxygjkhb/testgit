@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //break 跳出循环
+        for(var i=0;i<10;i++){
+            if(i==5){
+                break;
+            }
+            document.write("i = "+i+"<br>")
+        }
+        //continue语句:跳过本次循环
+        for(var i=0;i<10;i++){
+            if(i%2==0){
+                continue;
+            }
+            document.write(i+"&emsp;")
+        }
+        //与标签结合
+        document.write("开始循环！<br/>")
+        outerloop:
+        for(var i=0;i<5;i++){
+            document.write("外层循环："+i+"<br/>")
+            innerloop:
+            for(var j=0;j<5;j++){
+                if(j>3) break;
+                if(i==2) break innerloop;
+                if(i==4) break outerloop;
+                document.write("内层循环"+j+"<br/>")
+            }
+        }
+        document.write("循环结束！<br/>")
+    </script>
+</body>
+</html>

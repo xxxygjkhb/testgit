@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数
+
+        //函数的声明
+        //1function
+        function print(s){
+            comsole.log(s);
+        }
+        //var
+        var print =function(s){console.log(sprint)};
+        var f=function f(){};
+        //Function
+        var add= new Function(
+            'x',
+            'y',
+            'return x+y');
+            //等同于
+            function add(x,y){
+                return x+y;
+            }
+
+            //圆括号运算符
+            function add(x,y){
+                return x+y;
+            }
+            document.write(add(1,2));
+            
+            
+            //函数属性与方法
+            //name属性
+            function f1(){};
+            f1.name//f1
+            var f2 = function myName(){};
+            f2.name//myName
+            
+            var nyFunc=function(){};
+            function test(f){
+                console.log(f.name);
+            }
+            test(myFunc)//myFunc
+            //length属性:返回函数预期传入的参数个数
+            function f(a,b){};
+            f.length//2
+
+            // toString:返回一个字符串，内容是函数的源码
+            function f(){
+                a();
+                b();
+            }
+            f.toString()
+            /* function f(){
+                a();
+              b();
+             }*/
+
+             //函数作用域
+             var v=1
+             function f(){
+                var v=2;
+                console.log(v);
+             }
+             f()//2
+             v//1
+             
+
+             //参数
+             function square(x){
+                return x*x;
+             }
+             square(2)//4
+             //x是square的参数
+             //参数可以省略
+             function f(a,b){
+                return a;
+             }
+             f(1,2,3)//1
+            
+             //传递方式
+             var p=2;
+             function f(p){
+                p=3
+             }
+             f(p);
+             p//2
+             //同名参数
+             function f(a,a){
+                console.log(a);
+             }
+             f(1,2)//2
+
+             //arguments对象:在函数体内部读取所有参数
+             var =function(one){
+                console.log(arguments[0]);
+                console.log(arguments[1]);
+                console.log(arguments[2]);
+             }
+             f(1,2,3)
+             //1
+             //2
+             //3
+
+             var f=function(a,b){
+                arguments[0]=3;
+                arguments[1]=2;
+                return a+b;
+             }
+             f(1,1)//5
+             //'use strict'; // 开启严格模式,修改arguments对象不会影响到实际的函数参数
+
+             //arguments转换为数组
+             var args = Array.prototype.slice.call(arguments);
+             //或者
+             var args=[];
+             for(var i =0;i<arguments.length;i++){
+                args.push(arguments[i]);
+             }
+
+
+             //闭包
+             function f1(){
+                var n =999;
+                function f2(){
+                    console.log(n);//999
+                }
+                return f2;
+             }
+             var result = f1;
+             result();//999
+
+             //立即调用的函数表达式IIFE
+             var tmp =newData;
+             processData(tmp);
+             storeData(tmp);
+             //或者
+             (
+                function (){
+                    var tmp=newData;
+                    processData(tmp);
+                    storeData(tmp);
+
+                }()
+             )
+
+             //eval命令
+             eval ('var a=1;')
+             a//1
+
+             var a=1;
+             eval ('a=2');
+             a//2
+
+             (function f(){
+                'use strict';
+                var foo =1;
+                eval('foo=2')
+                console.log(foo);//2
+             })()
+
+             //eval 的别名调用
+
+             var a=1;
+             function f(){
+                var a=2;
+                var e=eval;
+                e('console.log(a)');
+             }
+             f()//1
+    </script>
+</body>
+</html>

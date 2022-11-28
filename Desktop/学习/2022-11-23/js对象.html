@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //JS创建对象:可以使用花括号{ }来创建对象
+        var person={
+            name:"zkf",
+            age:"21",
+            displayName:function(){
+                document.write(this.name);
+            }
+        }
+        document.write("姓名："+person.name+"<br>");
+        //如果属性名中包含空格或者特殊字符，则不能使用对象名.属性名的形式来访问对象属性，必须使用对象名["属性名"]的形式才行
+
+        //设置修改对象属性
+        person.phone="123456";
+        delete person["age"];
+        for (var key in person){
+            docunment.write(key+":"+person[key]+"<br>")
+        }
+        //调用对象
+        person.displayName();
+    </script>
+</body>
+</html>

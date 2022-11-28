@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //js作用域
+
+        //js全局作用域
+        var str="Hello World!";
+        function myFun(){
+            docunment.write(str);
+        }
+        document.write(str);
+
+        //所有具有全局作用域的变量都会被绑定到 window 对象中，成为 window 对象的一个属性
+        var str2="JavaScript"
+        document.write(str2);
+        document.write(window.str2);
+        document.write(str2===window.str2);
+
+        //局部作用域
+        function myFun2(){
+            var str3 ="Hello World!"
+            docunment.write(str3);
+        }
+        document.write(str3);
+    </script>
+</body>
+</html>

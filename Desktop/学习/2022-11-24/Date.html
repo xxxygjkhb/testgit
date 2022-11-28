@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Date对象
+         
+        var time1=new Date();
+        var time2=new Date(126321456000);
+        var time3=new Date("2022/11/10 16:20:12");
+        var time4=new Date(2022,6,10,16,13,26);
+        document.write(time1+"<br>");
+        document.write(time2+"<br>");
+        document.write(time3+"<br>");
+        document.write(time4+"<br>");
+
+        //对象中的属性
+        var time5 =new Date();
+        Date.prototype.name=null;
+        time5.name="JS"
+        document.write(time5.constructor+"<br>");
+        document.write(time5.name+"<br>");
+
+        //Date中的方法
+        var time = new Date();
+        document.write(time.getDate() + "<br>");             // 输出：23
+        document.write(time.getDay() + "<br>");              // 输出：5
+        document.write(time.getFullYear() + "<br>");         // 输出：2021
+        document.write(time.getHours() + "<br>");            // 输出：16
+        document.write(time.getMonth() + "<br>");            // 输出：6
+        document.write(time.getTime() + "<br>");             // 输出：1627028869285
+        document.write(time.getUTCDate() + "<br>");          // 输出：23
+        document.write(time.toDateString() + "<br>");        // 输出：Fri Jul 23 2021
+        document.write(time.toString() + "<br>");            // 输出：Fri Jul 23 2021 16:29:57 GMT+0800 (中国标准时间)
+        document.write(time.toLocaleDateString() + "<br>");  // 输出：2021/7/23
+        document.write(time.toLocaleTimeString() + "<br>");  // 输出：下午4:31:00
+        document.write(time.toLocaleString() + "<br>");      // 输出：2021/7/23下午4:31:00
+    </script>
+</body>
+</html>

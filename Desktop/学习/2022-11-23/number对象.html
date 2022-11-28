@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var x=123;//整数
+        var y=3.14;//浮点数
+        var z=0xff;//十六进制：255
+        var o=1.57e4//1.57x10^4
+        var p=1.57e+7//1.57x10^7
+        //八进制表示法使用 0 作为前缀，十六进制表示法使用 0x 作为前缀
+        var q=5/0;//Infinity)(无穷)
+        //NaN:非数字
+        //number对象:是原始数值的包装对象
+         var myNum=new Number(value)
+         var myNum=Number(value)
+         //eg:
+         var a=new Number("123");
+         var b=Number("456");
+         var c=789;
+         var d=new Number("abc");
+
+         document.write(typeof a + "<br>");      // 输出：object
+         document.write(typeof b + "<br>");      // 输出：number
+         document.write(typeof c + "<br>");      // 输出：number
+         document.write(d + "<br>");             // 输出：NaN
+    </script>
+</body>
+</html>

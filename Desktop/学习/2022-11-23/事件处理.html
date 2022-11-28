@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="myBtn()">按钮</button>
+    <p></p>
+    <button type="button" id="myBtn2">按钮2</button>
+    <p></p>
+    <button type="button" onmouseover="alert('鼠标移动到此处');">请将鼠标移动过来</button><br>
+    <a href="#" onmouseover="myEvent()">请将鼠标移动过来</a>
+    <p></p>
+    <div style="width: 350px;height: 200px; border: 1px solid black ;" id="myBox"></div>
+    <p></p>
+    <input type="text" onkeydown="myEvent3()">
+    <script>
+       //JS事件处理
+
+       //事件绑定：事件只有与 HTML 元素绑定之后才能被触发
+       function myBtn(){
+        alert("Hello World!")
+       }
+
+       //另一种方法
+       function sayHello(){
+        alert("Hello World!")
+       }
+       document.getElementById("myBtn2").onclick=sayHello
+       //事件实例
+
+       //onmouseover事件
+       function myEvent(){
+        alert('鼠标已经移动过来')
+       }
+ 
+      //onmouseout
+      function myEvent2(){
+        alert("您的鼠标已经离开指定元素")
+      }
+      document.getElementById("myBox").onmouseout=myEvent2;
+
+      //onkeydown事件
+      function myEvent3(){
+        alert("按下了键盘某个按键")
+      }
+    </script>
+</body>
+</html>

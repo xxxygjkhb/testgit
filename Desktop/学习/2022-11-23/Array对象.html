@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JS Array对象
+
+        var fruits=new Array("apple","orange","mango");
+        console.log(fruits);
+
+        //可以直接使用方括号[ ]来定义数组，[ ]中为数组中的各个元素，多个元素之间使用逗号
+
+        //可以通过数组的索引来访问数组中的各个元素
+        document.write(fruits[0]+"<br>")
+        document.write(fruits[1]+"<br>")
+        document.write(fruits[2]+"<br>")
+
+        //Array对象的属性
+        var cars = new Array("Saab","Volvo","BMW")
+        Array.prototype.name = null;
+        cars.name = "JavaScript";
+        document.write(cars.constructor+"<br>");
+        document.write(cars.length+"<br>");
+        document.write(cars.name+"<br>");
+
+        //Array对象中的方法
+        var fruits = ["Orange", "Banana", "Apple", "Papaya", "Mango"];
+        document.write(fruits.entries() + "<br>");              // 返回：[object Array Iterator]
+        document.write(fruits.includes("Apple") + "<br>");      // 返回：true
+        document.write(fruits.fill("grape") + "<br>");          // 返回：grape,grape,grape,grape,grape
+        var fruits = ["Orange", "Banana", "Apple", "Papaya", "Mango"];
+        document.write(fruits.indexOf("Mango") + "<br>");               // 返回：4
+        document.write(Array.isArray(fruits) + "<br>");                 // 返回：true
+        document.write(fruits.join("-") + "<br>");                      // 返回：Orange-Banana-Apple-Papaya-Mango
+        document.write(fruits.lastIndexOf("Banana") + "<br>");          // 返回：1
+        document.write(fruits.pop() + "<br>");                          // 返回：Mango
+        document.write(fruits.push("Watermelon") + "<br>");             // 返回：5
+        document.write(fruits.unshift("Lemon","Pineapple") + "<br>");   // 返回：7
+        document.write(fruits.slice(1, 5) + "<br>");                    // 返回：Pineapple,Orange,Banana,Apple
+        document.write(fruits.sort() + "<br>");                         // 返回：Apple,Banana,Lemon,Orange,Papaya,Pineapple,Watermelon
+        document.write(fruits.valueOf() + "<br>");           
+    </script>
+</body>
+</html>

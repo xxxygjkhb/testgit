@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JS正则表达式
+        var str = "Hello World!";
+        var reg = /[a-g]/g;
+        document.write(reg.exec(str) + "<br>");             // 输出：e
+        document.write(reg.test(str) + "<br>");             // 输出：true
+        document.write(reg.toString() + "<br>");            // 输出：/[a-g]/g
+        document.write(str.search(reg) + "<br>");           // 输出：1
+        document.write(str.match(reg) + "<br>");            // 输出：e,d
+        document.write(str.matchAll(reg) + "<br>");         // 输出：[object RegExp String Iterator]
+        document.write(str.replace(reg, "+") + "<br>");     // 输出：H+llo Worl+!
+        document.write(str.split(reg) + "<br>");            // 输出：H,llo Worl,!
+    </script>
+</body>
+</html>
