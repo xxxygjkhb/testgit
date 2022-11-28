@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">JS输出 </div>
+    <script type="text/javascript">
+        //JS的输出
+
+        //alert(),弹出提示框
+        var x=5;
+        y=6;
+        alert("x*y="+ x*y);
+        //confirm():带有“确定”，“取消”的提示框
+        var res=confirm("显示内容")
+        if(res==true){
+            alert("你点击了‘确定’");
+        }else{
+            alerf("你点击了‘取消’");
+        }
+        //console.log：在浏览器的控制台输出信息
+        var message= ["zkf","21","chengdu","56","9"]
+        console.log(message)
+        //document.write(): 可以向 HTML 文档中写入 HTML 或者 JavaScript 代码
+
+        document.write("<p>现在的时间是</p>");
+        document.write(Date());
+
+        //innerHTML:是一个属性而不是一个函数，通过它可以设置或者获取指定 HTML 标签中的内容
+         var demo = document.getElementById("demo");
+         console.log(demo.innerHTML);
+         demo.innerHTML="<h2>innerHTML</h2>"
+    </script>
+    
+</body>
+</html>

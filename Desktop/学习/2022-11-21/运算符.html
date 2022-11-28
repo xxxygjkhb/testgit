@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //运算符
+
+        //算数运算符
+        var x=2;
+        var y=6;
+        console.log(x+y);
+        console.log(x-y);
+        console.log(x*y);
+        console.log(x/y);
+        console.log(x%y);
+
+        //赋值运算符
+        var a=10;
+        a+=20;
+        console.log(a);//30
+        var b=12;
+        c =7;
+        b -=c
+        console.log(b);//5
+
+        //字符串运算符
+        var h="hello ";
+        var w="world!";
+        h +=w;
+        console.log(h);
+
+        //自增自减运算符
+        var p;
+        p=2;
+        console.log(++p);
+        console.log(p);
+
+        p=5;
+        console.log(--p);
+        console.log(p);
+        
+        p=9
+        console.log(p++);
+        console.log(p);
+
+        p=4
+        console.log(p--);
+        console.log(p);
+
+        //比较运算符:输出结果只有true和false
+        var x=20
+        var y=30
+        console.log(x==y)
+        console.log(x<y)
+
+        //逻辑运算符
+        var year=2022;
+        if((year%400==0)||((year %100!=0)&&(year%4==0)))//闰年可以被 400 整除，也可以被 4 整除，但不能被 100 整除
+        {
+            console.log(year+"年是闰年")
+        }
+        else{
+            console.log(year+"年不是闰年")
+        }
+        //三元运算符
+        var x=11
+        var y=20
+        x > y ? console.log("x大于y"):console.log("x小于y");
+    </script>
+</body>
+</html>

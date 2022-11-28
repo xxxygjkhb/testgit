@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //   js基本数据类型
+         //string
+         var str1="Let's have a cup of coffee.";
+         var str2='He said "Hello" and left';
+         var str3='We\'ll never give up ';
+
+        //   number 
+         var num1=5;
+         var num2=3.14;
+         var unm3=23e9;
+         //lnfinity:正无穷大 NaN:无效或未定义
+
+        //  Boolean:ture/false
+        var a=true;
+        var b=false;
+        var c=5<6;//c=true
+        var d=5>6;//c=false
+        //symbol:独一无二的值，使用 Symbol() 函数来生成
+         var str4="123"
+         var sym1=Symbol(str4);
+         var sym2=Symbol(str4);
+         console.log(sym1);
+         console.log(sym2);
+         console.log(sym1==sym2);
+         //JS引用数据类型
+
+         //Object:由键、值组成的无序集合
+             var person={
+                name:'ZKF',
+                age:21,
+                city:'chengdu',
+             };
+             console.log(person.name);
+             //Array:按顺序排列的数据的集合，可以包含任意类型的数据
+             var arr=[6,9,3.14,'Hello',null,true];
+             console.log(arr[0]);
+             console.log(arr[4]);
+             //Function:具有特定功能的代码块，函数并不会自动运行，需要通过函数名调用才能运行
+             function sayHello(name){
+                return"Hello," + name;
+             }
+             var res=sayHello("Peter");
+             console.log(res);
+    </script>
+</body>
+</html>
