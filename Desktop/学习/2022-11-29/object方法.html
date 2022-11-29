@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Object.getPrototypeOf():返回参数对象的原型
+        var F=function(){}
+        var f=new F()
+        Object.getPrototypeOf(f)===F.prototype//typr
+
+        //Object.setPrototypeOf():为参数对象设置原型，返回该参数对象
+        var a={}
+        var b={x,1}
+        Object.setPrototypeOf(a,b)
+        Object.getPrototypeOf(a)===b//ture
+
+        //Object.create():从一个实例对象，生成另一个实例对象
+        // 原型对象
+          var A = {
+          print: function () {
+          console.log('hello');
+           }
+         };
+
+        // 实例对象
+          var B = Object.create(A);
+
+          Object.getPrototypeOf(B) === A // true
+          B.print() // hello
+          B.print === A.print // true
+
+          //Object.prototype.isPrototypeOf():用来判断该对象是否为参数对象的原型
+          var o1 = {};
+          var o2 = Object.create(o1);
+          var o3 = Object.create(o2);
+
+          o2.isPrototypeOf(o3) // true
+          o1.isPrototypeOf(o3) // true
+
+          //Object.prototype.__proto__ :返回该对象的原型。该属性可读写
+          var obj = {};
+          var p = {};
+          obj.__proto__ = p;
+          Object.getPrototypeOf(obj) === p // true
+          //通过__proto__属性，将p对象设为obj对象的原型
+
+          //Object.getOwnPropertyNames():方法返回一个数组，成员是参数对象本身的所有属性的键名，不包含继承的属性键名
+          Object.getOwnPropertyNames(Date)
+          //返回Date所有自身的属性名
+
+          //Object.prototype.hasOwnProperty():返回一个布尔值，用于判断某个属性定义在对象自身，还是定义在原型链上
+          Date.hasOwnProperty('length')  // true
+          Date.hasOwnProperty('toString') // false
+           //Date.length（构造函数Date可以接受多少个参数）是Date自身的属性，Date.toString是继承的属性
+
+
+           //in 运算符和 for...in 循环
+           //in:in运算符返回一个布尔值，表示一个对象是否具有某个属性
+           'length' in Date // true
+           'toString' in Date // true
+
+           //获得对象的所有可遍历属性（不管是自身的还是继承的），可以使用for...in循环
+           var o1 = { p1: 123 };
+
+           var o2 = Object.create(o1, {
+            p2: { value: "abc", enumerable: true }
+          });
+
+          for (p in o2) {
+            console.info(p);
+          }
+        // p2
+        // p1
+
+        
+    </script>
+</body>
+</html>

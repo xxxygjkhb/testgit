@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this
+        var person={
+            name:'zkf',
+            describe:function(){
+                return'姓名：'+this.name;
+            }
+        }
+        //this指name属性所在的对象
+
+        //this指向可变
+        function f(){
+            return '姓名'+this.name;
+        }
+        var a={
+            name:'11'
+            describe:f
+        };
+        var b={
+            name='222'
+            describe:f
+        }
+        a.describe()//111
+        b.describe()//222
+
+        //使用场合
+        //全局环境:指的就是顶层对象window
+        this===window//ture
+        function f(){
+            console.log(this===window);
+        }
+        //构造函数
+        var Obj =function(p){
+            this.p=p;
+        }
+        //
+        var o=new Obj('Hello World!');
+        o.p//Hello World!
+
+        //对象的方法:如果对象的方法里面包含this，this的指向就是方法运行时所在的对象。该方法赋值给另一个对象，就会改变this的指向
+        var obj={
+            foo:function(){
+                console.log(this);
+            }
+        };
+
+        obj.foo//obj
+
+       //避免多层this
+       //解决方法：
+       var o={
+        f1:function(){
+            console.log(this)
+            var that=this;
+            var f2=function(){
+                console.log(that);
+            }();
+        }
+       } 
+       
+       
+       //避免数组处理方法中的this
+       var o={
+        v:'hello',
+        p:['a1','a2'],
+        f:function f(){
+            this.p.forEach(function(item){
+                console.log(this.v+' '+item)
+            },this);
+        }
+       }
+       o.f()//hello a1
+            //helllo a2
+            
+
+            //避免回调函数中的this
+
+
+            //绑定this的方法：call、apply、bind
+            
+            //function.prototype.call():
+            var obj={}
+            var f=function(){
+                return this;
+            }
+            f()===window//ture
+            f.call(obj)===obj//ture
+
+            //.apply():
+            function f(x,y){
+                console.log(x+y)
+            }
+            f.call(null,1,1)//2
+            f.apply(null,[1,1])//2
+            //找出数组最大元素
+            var a=[10,5,96,4];
+            Math.max.apply(null,a)//96
+
+            //.bind:用于将函数体内的this绑定到某个对象，然后返回一个新函数
+            var counter={
+                count:0,
+                inc:function(){
+                    this.count++;
+                }
+            }
+            var func=counter.inc.bind(counter);
+            func();
+            counter.count//1
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //面向对象编程
+
+        //构造函数
+        var Vehicle=function(){
+            this.price=1000;
+        };
+        var v=new Vehicle();
+        //v.price:1000
+        //new命令的作用，就是执行构造函数，返回一个实例对象
+
+        //不使用new命令：
+        var Vehicle = function (){
+            this.price = 1000;
+        };
+
+         var v = Vehicle();
+         v // undefined
+         price // 1000
+
+         //使用严格模式，不使用new会报错
+         function Fubar(foo, bar){
+         'use strict';
+          this._foo = foo;
+          this._bar = bar;
+          }
+
+         Fubar()
+         // TypeError: Cannot set property '_foo' of undefined
+
+
+         //new.target
+         function f() {
+         if (!new.target) {
+         throw new Error('请使用 new 命令调用！');
+         }
+         //...
+        }
+        //没有使用new命令，就会抛出一个错误
+
+        //object.create()创建实例对象
+        var person1 = {
+         name: '张三',
+         age: 38,
+         greeting: function() {
+          console.log('Hi! I\'m ' + this.name + '.');
+          }
+         };
+
+         var person2 = Object.create(person1);
+
+         person2.name // 张三
+         person2.greeting() // Hi! I'm 张三.
+    </script>
+</body>
+</html>

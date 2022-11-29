@@ -1,0 +1,14 @@
+{
+    "course":{
+        "name":"zkf",
+        "year":2001,
+        "bestseller":true
+        
+    },
+    "fruits":[
+        "apple",
+        "banana",
+        "mango"
+
+    ]
+}

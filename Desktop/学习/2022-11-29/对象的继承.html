@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prototype的作用
+        function Animal(name){
+            this.name=name;
+        }
+        Animal.prototype.color='white';
+        var cat1=new Animal('大毛');
+        var cat2=new Animal('二毛');
+        cat1.color//white
+        cat2.color//white
+      
+        //实例对象自身就有某个属性或方法，它就不会再去原型对象寻找这个属性或方法
+        cat1.color='black'
+        cat1.color//black
+        cat2.color//white
+
+
+        //constructor属性:可以得知某个实例对象，到底是哪一个构造函数产生的
+        function F() {};
+        var f=new F()
+         f.constructor===F//ture
+
+         //instanceof运算符:返回一个布尔值，表示对象是否为某个构造函数的实例
+         var v=new Vehicle();
+         v instanceof Vehicle//ture
+
+         //等同于
+         Vehicle.prototype.isPrototypeOf(v)
+
+         //构造函数的继承
+         function Shape(){
+            this.x=0;
+            this.y=0;
+         }
+         Shape.prototype.move=function(x,y){
+            this.x+=x;
+            this.y+=y
+            console.log('Shape moved.')
+         }
+         function Rectangle(){
+            Shape.call(this)
+         }
+         Rectangle.prototype=Object.create(Shape.prototype);
+         Rectangle.prototype.constructor=Rectangle;
+
+         //多重继承
+         function M1() {
+             this.hello = 'hello';
+           }
+
+             function M2() {
+              this.world = 'world';
+            }
+
+             function S() {
+               M1.call(this);
+               M2.call(this);
+            }
+
+            // 继承 M1
+            S.prototype = Object.create(M1.prototype);
+            // 继承链上加入 M2
+            Object.assign(S.prototype, M2.prototype);
+
+            // 指定构造函数
+            S.prototype.constructor = S;
+
+            var s = new S();
+            s.hello // 'hello'
+            s.world // 'world'
+
+            //模块
+
+            //封装私有变量：构造函数的写法
+            function StringBuilder(){
+                var buffer=[];
+                this.add = function(str){
+                    buffer.push(str);
+                }
+                this.toString= function(){
+                    return buffer.join('');
+                }
+            }
+            
+    </script>
+</body>
+</html>
