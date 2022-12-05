@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   div.a{
+    width: 674px;
+    height: 532px;
+    overflow: hidden;
+    padding-top: 13px;
+    border: 1px solid blue;
+   }
+   
+   div.b{
+    width: 674px;
+    height: 494px;
+   }
+
+   div.b1{
+    width: 637px;
+    height: 18px;
+    margin-left: 18px;
+    display: flex;
+    justify-content: space-between;
+   }
+   .text1{
+    width: 73px;
+    height: 18px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    white-space: nowrap;
+    line-height: 18px;
+    text-align: left;
+   }
+   .img1{
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+   }
+   .b2{
+    width: 674px;
+    height: 1px;
+    margin-top: 19px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+   }
+   .b3{
+    width: 390px;
+    height: 18px;
+    margin: 18px 0 0 23px;
+    display: flex;
+    justify-content: space-between;
+   }
+   .text2{
+    width: 52px;
+    height: 18px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    white-space: nowrap;
+    line-height: 18px;
+    text-align: left;
+   }
+   .b4{
+    width: 621px;
+    height: 30px;
+    margin: 10px 0 0 23px;
+    display: flex;
+    justify-content: space-between;
+   }
+   .c1{
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221,221,221,1);
+    width: 275px;
+    padding: 6px 0 0 14px;
+    display: flex;
+    justify-content: space-between;
+   }
+   .box1{
+    width: 150px;
+    height: 17px;
+    display: flex;
+    justify-content: space-between;
+   }
+   .outer1{
+    width: 13px;
+    height: 13px;
+    border: 4px solid rgba(34, 136, 252, 1);
+    border-radius: 50%;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+   }
+   .outer2{
+    width: 13px;
+    height: 13px;
+    border: 4px solid rgba(154, 154, 156, 1);
+    border-radius: 50%;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .layer1 {
+  width: 11px;
+  height: 6px;
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngd13c2784a786e15abc841e867da56b94cb08a2dec535e9e7da653d00a114dd0f) -1px -1px
+    no-repeat;
+  background-size: 13px 8px;
+
+}
+.b5{
+    width: 409px;
+    height: 20px;
+    margin: 19px 0 0 25px;
+    display: flex;
+    flex-direction: row;
+}
+.text3{
+    width: 52px;
+    height: 18px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    white-space: nowrap;
+    line-height: 18px;
+    text-align: left;
+  margin: 1px 0 0 263px;
+}
+.word3{
+    width: 7px;
+  height: 18px;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(245, 25, 37, 1);
+  font-size: 13px;
+  font-family:'Courier New', Courier, monospace
+  white-space: nowrap;
+  line-height: 18px;
+  text-align: right;
+  margin: 2px 0 0 12px;
+}
+.word4{
+    width: 7px;
+    height: 18px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(245, 25, 37, 1);
+    font-size: 13px;
+    font-family:'Courier New', Courier, monospace;
+    white-space: nowrap;
+    line-height: 18px;
+    text-align: left;
+    margin: 1px 0 0 45px;
+}
+.b6{
+    width: 625px;
+    height: 30px;
+    margin: 7px 0 0 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.c2{
+    height: 25px;
+  border-radius: 2px;
+  border: 1px solid rgba(221, 221, 221, 1);
+  width: 295px;
+  padding: 7px 0 0 7px;
+}
+.text4{
+    width: 91px;
+  height: 12px;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(187, 187, 187, 1);
+  font-size: 13px;
+  font-family:'Courier New', Courier, monospace;
+  white-space: nowrap;
+  line-height: 13px;
+  text-align: left;
+}
+.c3{
+    z-index: 7;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid rgba(34, 136, 252, 1);
+  width: 275px;
+  position: relative;
+  padding: 8px 0 0 20px;
+}
+
+.word5{
+    z-index: 28;
+  position: absolute;
+  left: 8px;
+  top: 9px;
+  width: 184px;
+  height: 12px;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(51, 51, 51, 1);
+  font-size: 13px;
+  letter-spacing: 0.7264705896377563px;
+  font-family::'Courier New', Courier, monospace
+  white-space: nowrap;
+  line-height: 13px;
+  text-align: left;
+}
+.b7{
+    width: 375px;
+    height: 18px;
+    margin: 19px 0 0 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.b8{
+    width: 623px;
+    height: 30px;
+    margin: 9px 0 0 25px;
+    display: flex;
+    flex-direction: row;
+}
+.c4{
+    width: 300px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+.text5{
+    width: 124px;
+    height: 12px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 13px;
+    letter-spacing: 0.7264705896377563px;
+    font-family:'Courier New', Courier, monospace
+    white-space: nowrap;
+    line-height: 13px;
+    text-align: left;
+    margin: 9px 0 0 -292px;
+}
+.c5{
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    margin-left: 191px;
+    padding-left: 7px;
+    width: 275px;
+   
+}
+.text6{
+    width: 138px;
+    height: 12px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 13px;
+    font-family:'Courier New', Courier, monospace
+    white-space: nowrap;
+    line-height: 13px;
+    text-align: left;
+}
+.b9{
+    width: 378px;
+    height: 18px;
+    margin: 19px 0 0 26px;
+    display:flex;
+    justify-content: space-between;
+}
+.b10{
+    width: 623px;
+    height: 30px;
+    margin: 9px 0 0 25px;
+    display: flex;
+    flex-direction: row;
+}
+.c6{
+    width: 300px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    display: flex;
+    flex-direction: column;
+}
+.text7{
+    width: 259px;
+    height: 12px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 13px;
+    letter-spacing: 0.7264705896377563px;
+    font-family:'Courier New', Courier, monospace
+    white-space: nowrap;
+    line-height: 13px;
+    text-align: left;
+    margin: 9px 0 0 -300px;
+}
+.b11{
+    width: 300px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    margin-left: 56px;
+    display: flex;
+    flex-direction: column;
+}
+.text8{
+    width: 259px;
+    height: 12px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 13px;
+    letter-spacing: 0.7264705896377563px;
+    font-family:'Courier New', Courier, monospace
+    white-space: nowrap;
+    line-height: 13px;
+    text-align: left;
+    margin: 9px 0 0 -300px;
+}
+
+.b12{
+    width: 380px;
+    height: 18px;
+    margin: 22px 0 0 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.b13{
+    width: 623px;
+    height: 30px;
+    margin: 12px 0 0 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c7{
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    width: 300px;
+    padding: 6px 0 0 11px;
+    display: flex;
+    flex-direction: column;
+}
+.section1 {
+  width: 13px;
+  height: 13px;
+  border: 4px solid rgba(34, 136, 252, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  margin-top: 2px;
+}
+.section2 {
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgba(154, 154, 156, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  margin: 2px 0 0 39px;
+}
+.box2{
+    width: 200px;
+  height: 17px;
+  display: flex;
+  flex-direction: row;
+}
+.text9{
+    width: 50px;
+  height: 17px;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(51, 51, 51, 1);
+  font-size: 12px;
+  font-family:'Courier New', Courier, monospace
+  white-space: nowrap;
+  line-height: 17px;
+  text-align: left;
+  margin-left: 6px;
+}
+.text10{
+    width: 50px;
+  height: 17px;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(51, 51, 51, 1);
+  font-size: 12px;
+  font-family:'Courier New', Courier, monospace
+  white-space: nowrap;
+  line-height: 17px;
+  text-align: left;
+  margin-left: 6px;
+}
+.c8{
+    width: 300px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+.d1{
+    width: 127px;
+    height: 32px;
+    margin: 38px 0 0 521px;
+    display: flex;
+    justify-content: space-between;
+}
+.group2{
+    height: 32px;
+    border-radius: 2px;
+    background-color: rgba(34, 136, 252, 1);
+    padding-left: 15px;
+    width: 58px;
+}
+.group3{
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid rgba(203, 203, 203, 1);
+    width: 58px;
+}
+.text11{
+    width: 32px;
+    height: 12px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 13px;
+    font-family:'Courier New', Courier, monospace
+    white-space: nowrap;
+    line-height: 13px;
+    text-align: left;
+}
+.text12{
+    width: 24px;
+    height: 12px;
+    display: block;
+    overflow-wrap: break-word;
+    color: rgba(102, 102, 102, 1);
+    font-size: 12px;
+    font-family:'Courier New', Courier, monospace
+    white-space: nowrap;
+    line-height: 12px;
+    text-align: left;
+}
+</style>
+<body>
+   <div class="a">
+       <div class="b">
+          <div class="b1">
+             <span class="text1"><b>发票信息</b></span>
+             <img class="img1" src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb615c59ef67c42da7caffff46c7d331cd161cf6fcb94cb6385e0ffebcc386af2" referrerpolicy="no-referrer">
+          </div>
+          <div class="b2"></div>
+          <div class="b3">
+            <span class="text2">开票单位</span>
+            <span class="text2">发票类型</span>
+          </div>
+          <div class="b4">
+            <div class="c1">
+                <div class="box1">
+                    <div class="outer1"></div>
+                    <span class="text2">企业</span>
+                    <div class="outer2"></div>
+                    <span class="text2">个人</span>
+                </div>
+            </div>
+            <div class="c1">
+                <span class="text2">电子普票</span>
+               <div class="layer1"></div> 
+            </div>
+          </div>
+                    <div class="b5">
+                        <span class="text2">发票抬头</span> <span class="word3">*</span>
+                         <span class="text3">纳税人识别号</span><span class="word4">*</span>
+                    </div>
+                    <div class="b6">
+                        <div class="c2">
+                            <span class="text4">请输入发票抬头</span>
+                        </div>
+                        <div class="c3">
+                            <span class="word5">7894561423164</span>
+                        </div>
+                    </div>
+                   
+                     <div class="b7">
+                        <span class="text2">开户银行</span>
+                        <span class="text3">开户账号</span>
+                     </div>
+                     <div class="b8">
+                         <div class="c4"></div>
+                         <span class="text5">成都银行航空港支行</span>
+                         <div class="c5">
+                            <span class="text6">6214&nbsp;4020&nbsp;5489&nbsp;994</span>
+                         </div>
+                     </div>
+                              <div class="b9">
+                                <span class="text2">注册地址</span>
+                                <span class="text3">注册电话</span>
+                              </div>
+
+                              <div class="b10">
+                                   <div class="c6">
+                                   </div>
+                                   <span class="text7">成都市高新区世纪城南路599号天府软件园</span>
+                                   <div class="b11">
+                                </div>
+                                <span class="text8">156&nbsp;7891&nbsp;3544</span>                      
+                                </div>
+                                
+
+                                <div class="b12">
+                                   <span class="text2">开票状态</span>
+                                   <span class="text3">发票备注</span>
+                                </div>
+                                <div class="b13" >
+                                     <div class="c7">
+                                        <div class="box2">
+                                            <div class="section1 "></div>
+                                            <span class="text9">未开票</span>
+                                            <div class="section2"></div>
+                                            <span class="text10">已开票</span>
+                                        </div>
+                                     </div>
+                                         <div class="c8"></div>
+                                    
+                                </div>
+
+                                <div class="d1">
+                                    <button class="group2">
+                                        <span class="text11">确定</span>
+                                    </button>
+                                    <button class="group3">
+                                        <span class="text12">取消</span>
+                                    </button>
+                                </div>
+
+       </div>
+   </div>
+</body>
+</html>
